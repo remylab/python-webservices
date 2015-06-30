@@ -12,9 +12,8 @@ def output_json(data, code, headers=None):
     
 class Root(restful.Resource):
     def get(self):
-        return {
-            'status': 'OK'
-        }
+        # return {'status':'OK'}
+	return make_response("",200)
 class Imgflip(restful.Resource):
     def get(self):             
         qs = request.query_string
