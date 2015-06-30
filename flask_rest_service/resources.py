@@ -27,7 +27,7 @@ class Imgflip(restful.Resource):
         if result["success"] == True :
             return make_response('imgflip_jsonp( "' + result["data"]["url"]+ '" )',200)
         else:
-            return output_json({'error': 'Unauthorized access'}, 400)
+            return output_json({'error': result["error_message"]}, 400)
 
 api.add_resource(Root, '/')    
 api.add_resource(Imgflip, '/imgflip')
