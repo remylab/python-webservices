@@ -5,4 +5,5 @@ Tiny rest api using Flask-Restful, thanks to this tutorial : http://spapas.githu
 How to use :
 
 pip install -r requirements.txt
+
 python runserver.py
